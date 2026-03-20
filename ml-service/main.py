@@ -12,7 +12,7 @@ FEATURES     = ["route_deviation_pct", "zone_density",
 MODEL_VERSION = "gradient_boosting_v2"
 
 try:
-    model = joblib.load(MODEL_PATH)
+    model =  joblib.load(MODEL_PATH)
     model_loaded = True
 except Exception as e:
     model_loaded = False
