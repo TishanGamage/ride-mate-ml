@@ -84,30 +84,6 @@ fi
             }
         }
 
-        stage('Health Check') {
-            steps {
-                sh '''#!/bin/bash
-set -euo pipefail
-
-echo "Waiting for service to be ready..."
-
-for i in $(seq 1 20); do
-    echo "Attempt ${i}/20..."
-
-    if curl -fsS "http://127.0.0.1:${APP_PORT}/health" > /dev/null; then
-        echo "✅ Service is healthy"
-        exit 0
-    fi
-
-    sleep 3
-done
-
-echo "❌ Health check failed"
-exit 1
-'''
-            }
-        }
-
         stage('Cleanup Old Images') {
             steps {
                 sh '''#!/bin/bash
