@@ -9,7 +9,7 @@ pipeline {
         APP_PORT        = "9090"
         ENV_FILE        = "/opt/jenkins-env/ride-mate-ml.env"
         GIT_BRANCH      = "main"
-        REPO_URL        = "https://github.com/TishanGamage/ride-mate-back-end"
+        REPO_URL        = "https://github.com/TishanGamage/ride-mate-ml"
         GIT_CREDENTIALS_ID = "github-finegrained-pat"
     }
 
